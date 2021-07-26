@@ -8,9 +8,16 @@ export type Todo = {
 
 export type TodoList = Todo[];
 
-export type TodoAction = {
-  type: 'ADD_TODO' | 'TOGGLE_TODO' | 'DELETE_TODO';
-  payload: Todo;
+export type TodoAction = AddTodoAction | BasicTodoAction;
+
+export type AddTodoAction = {
+  type: 'ADD_TODO';
+  payload: { todoContent: string };
+};
+
+export type BasicTodoAction = {
+  type: 'TOGGLE_TODO' | 'DELETE_TODO';
+  payload: { createdAt: number };
 };
 
 export type TodoElementProps = {

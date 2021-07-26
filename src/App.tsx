@@ -49,10 +49,11 @@ const App = () => {
     e.preventDefault();
     dispatch({
       type: 'ADD_TODO',
-      payload: { todoContent: userInput, isDone: false, createdAt: 0 },
+      payload: { todoContent: userInput },
     });
     setUserInput('');
   };
+
   return (
     <>
       <form onSubmit={handleSubmit}>

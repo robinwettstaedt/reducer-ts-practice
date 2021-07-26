@@ -12,8 +12,6 @@ const TodoElement = ({ dispatch, todo }: TodoElementProps) => {
           dispatch({
             type: 'TOGGLE_TODO',
             payload: {
-              todoContent: todo.todoContent,
-              isDone: todo.isDone,
               createdAt: todo.createdAt,
             },
           })
@@ -26,8 +24,6 @@ const TodoElement = ({ dispatch, todo }: TodoElementProps) => {
           dispatch({
             type: 'DELETE_TODO',
             payload: {
-              todoContent: todo.todoContent,
-              isDone: todo.isDone,
               createdAt: todo.createdAt,
             },
           })
